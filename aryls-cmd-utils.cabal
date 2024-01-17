@@ -40,7 +40,7 @@ library
   default-language: Haskell2010
 
 executable wotd
-  main-is: Main.hs
+  main-is: WOTD.hs
   other-modules:
       Paths_aryls_cmd_utils
   autogen-modules:

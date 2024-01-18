@@ -23,6 +23,10 @@ dependencies:
 - base >= 4.7 && < 5
 - time
 - text
+- aeson
+- http-conduit
+- bytestring
+- random
 ghc-options:
 - -Wall
 - -Wcompat
@@ -40,11 +44,22 @@ library:
 executables:
   wotd:
     main:                WOTD.hs
-    source-dirs:         app
+    source-dirs:         wotd
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    - -main-is WOTD
+    dependencies:
+    - aryls-cmd-utils
+  yurifetch:
+    main:                Yurifetch.hs
+    source-dirs:         yurifetch-hs
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -main-is Yurifetch
     dependencies:
     - aryls-cmd-utils
 

@@ -5,9 +5,10 @@
 
 module Yurifetch (main) where
 
-import YurifetchLib
 import Network.HTTP.Simple
 import System.Exit (die)
+import Text.Show.Pretty
+import YurifetchLib
 
 main :: IO ()
 main = do
@@ -18,6 +19,7 @@ main = do
   let parsedPosts = parsePosts fetchedPosts
   case parsedPosts of
     Just postList -> do
-      print postList
+      pPrint $ attributes postList
+      pPrint $ head $ post postList 
     Nothing -> do
       die "Error while decoding JSON!"

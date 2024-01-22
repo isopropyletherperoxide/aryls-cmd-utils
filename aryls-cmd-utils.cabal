@@ -38,6 +38,7 @@ library
     , base >=4.7 && <5
     , bytestring
     , http-conduit
+    , pretty-show
     , random
     , text
     , time
@@ -58,6 +59,7 @@ executable wotd
     , base >=4.7 && <5
     , bytestring
     , http-conduit
+    , pretty-show
     , random
     , text
     , time
@@ -78,6 +80,7 @@ executable yurifetch
     , base >=4.7 && <5
     , bytestring
     , http-conduit
+    , pretty-show
     , random
     , text
     , time
@@ -99,6 +102,7 @@ test-suite aryls-cmd-utils-test
     , base >=4.7 && <5
     , bytestring
     , http-conduit
+    , pretty-show
     , random
     , text
     , time

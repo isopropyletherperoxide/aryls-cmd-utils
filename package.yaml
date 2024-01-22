@@ -27,6 +27,7 @@ dependencies:
 - http-conduit
 - bytestring
 - random
+- pretty-show
 ghc-options:
 - -Wall
 - -Wcompat
